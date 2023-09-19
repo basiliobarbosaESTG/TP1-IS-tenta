@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="athletes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="atlethe">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sex" type="xs:string" />
+              <xs:element name="age" type="xs:string" />
+              <xs:element name="height" type="xs:string" />
+              <xs:element name="weight" type="xs:string" />
+              <xs:element name="country">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="team" type="xs:string" />
+                    <xs:element name="noc" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="competition">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="games" type="xs:string" />
+                    <xs:element name="year" type="xs:string" />
+                    <xs:element name="season" type="xs:string" />
+                    <xs:element name="city" type="xs:string" />
+                    <xs:element name="statsBySport">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="sport" type="xs:string" />
+                          <xs:element name="event" type="xs:string" />
+                          <xs:element name="medal" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
